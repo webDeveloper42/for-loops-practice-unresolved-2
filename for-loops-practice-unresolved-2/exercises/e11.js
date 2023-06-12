@@ -6,7 +6,17 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
-
+  let result = [];
+  for (let i = 0; i< array.length; i++){
+    let withdrawalsSum = 0;
+    if (array[i].withdrawals){
+      for (let x = 0; x < array[i].withdrawals.length; x++){
+        withdrawalsSum += array[i].withdrawals[x];
+      } 
+    }
+    result.push(withdrawalsSum);
+  }
+  return result;
 }
 
 // === TEST YOURSELF ===
