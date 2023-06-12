@@ -7,7 +7,15 @@
 
 export function flatArrays(array) {
   // Your code goes here...
-
+let flatArr = [];
+  for(let i = 0; i<array.length; i++){
+    if(Array.isArray(array[i])){
+      flatArr = flatArr.concat(array[i])
+    }else if(typeof array[i] === 'string'){
+      flatArr.push(array[i]);
+    }
+  }
+  return flatArr;
 }
 
 
