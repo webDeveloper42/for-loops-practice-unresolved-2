@@ -14,7 +14,13 @@ export function getClientWithGreatestBalance(array) {
       accountWithGreaterBalance = account;
     }
   }
-  return [accountWithGreaterBalance];
+  if(accountWithGreaterBalance !== null){
+    let result = [];
+    result.push(accountWithGreaterBalance);
+    return result;
+  }else{
+    return [];
+  }
 }
 
 
