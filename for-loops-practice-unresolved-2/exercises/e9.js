@@ -9,7 +9,7 @@ export function getClientsWithBalanceOverOneHundred(array) {
   let result = [];
   for(let i = 0; i < array.length; i++){
     if(typeof array[i].balance === 'number' && array[i].balance > 100){
-        result.push(array[i]);
+      result.push(array[i]);
     }
   }
   return result;
