@@ -6,7 +6,13 @@
 
 export function getClientsWithBalanceOverOneHundred(array) {
   // Your code goes here...
-  return array.filter(account => account.balance > 100 );
+  let result = [];
+  for(let i = 0; i < array.length; i++){
+    if(typeof array[i].balance === 'number' && array[i].balance > 100){
+        result.push(array[i]);
+    }
+  }
+  return result;
 }
 
 
